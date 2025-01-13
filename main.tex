@@ -1,0 +1,104 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=0.3cm,rmargin=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{enumitem}
+
+% rm left indent
+\setlength{\parindent}{0pt}
+
+% compact enumerations
+\setlist{noitemsep,topsep=0pt,leftmargin=*}
+% \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+% include path for images
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+% banner on left side
+\noindent
+\begin{minipage}[t]{0.3106\textwidth}
+    \clearpage  % fix for page break before content
+    \vspace{-0.45cm}
+    \includegraphics[width=\textwidth]{triangles.pdf}
+
+    % profile picture
+    \vspace{-24.62cm}
+    \hspace{1.44cm}
+    \includegraphics[width=3cm,clip]{profile.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.65\textwidth}
+    \section*{Summary}
+
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+    % to do: summary about professional profile. carer goals? highlight of key achievements.
+
+    \vspace{0.5cm}
+    \hrule
+
+    \section*{Experience}
+    \textbf{Research Assistant} \\ TU Dortmund University, DE \hfill 2024 -- Today
+    \begin{itemize}
+        \item Key responsibility or achievement 1.
+        \item Key responsibility or achievement 2.
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \textbf{Team Captain / CEO} \\ GET racing, Formula Student Team of TU Dortmund, DE \hfill 2023
+    \begin{itemize}
+        \item Coordination of the production phase of the FS223 vehicle.
+        \item Commissioning and integration of autonomous driving software.
+        \item Logistical planning of the competitions.
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \textbf{Autonomous System Lead} \\ GET racing, Formula Student Team of TU Dortmund, DE \hfill 2019 -- 2023
+    \begin{itemize}
+        \item Initial assembly of the autonomous system department.
+        \item Acquisition of partners in industry and at university.
+        \item Conception and implementation of the autonomous system software.
+        \item Commissioning and development of automated simulation infrastructure.
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \textbf{Software Developer} \\ SimPlan Integrations GmbH, Witten, DE \hfill 2018 -- Today
+    \begin{itemize}
+        \item Key responsibility or achievement 1.
+        \item Key responsibility or achievement 2.
+    \end{itemize}
+
+    \section*{Education}
+    \textbf{Undergraduate: M.Sc. in Computer Science} \\ TU Dortmund University, DE \hfill 2022 -- Today
+
+    \vspace{0.2cm}
+
+    \textbf{B.Sc. in Computer Science} \\ TU Dortmund University, DE \hfill 2017 -- 2022
+    \begin{itemize}
+        \item Minor subject: Robotics (controls theory and electronics)
+        \item Thesis: A method for localizing mobile robots using multiple sensors
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \textbf{Abitur} \\ Gymnasium Hohenlimburg, Hagen, DE \hfill 2009 -- 2017
+
+    \section*{Skills}
+    \begin{itemize}
+        \item Skill 1
+        \item Skill 2
+        \item Skill 3
+    \end{itemize}
+
+    \section*{Languages}
+    \begin{itemize}
+        \item Language 1 -- Proficiency
+        \item Language 2 -- Proficiency
+    \end{itemize}
+\end{minipage}
+
+\end{document}
