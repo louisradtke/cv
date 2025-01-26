@@ -18,7 +18,8 @@ jobs:
 
       - name: Build PDF with latexmk
         run: |
-          latexmk -pdf main.tex
+          git config --global --add safe.directory $(pwd)
+          sh -c 'latexmk -pdf main.tex; echo "variables.tex"; cat variables.tex'
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v3
