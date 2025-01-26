@@ -8,11 +8,14 @@
 \usepackage{xcolor}
 \usepackage{avant} % for font
 \usepackage{titlesec}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{skins,breakable} % Load necessary libraries
+
 
 \renewcommand{\familydefault}{\sfdefault}
-\newcommand{\col}[2]{\textcolor[HTML]{#1}{#2}}
 
-\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\newcommand{\subsectionskip}[0]{\vspace{0.125cm}}
 
 % rm left indent
 \setlength{\parindent}{0pt}
@@ -24,6 +27,10 @@
 % include path for images
 \graphicspath{ {./images/} }
 
+\newcommand{\col}[2]{\textcolor[HTML]{#1}{#2}}
+\newcommand{\badge}[1]{\tcbox[on line,size=small,nobeforeafter,fontupper={\strut},bottom=-0.75mm]{\textbf{#1}}}
+\input{variables.tex}
+
 \begin{document}
 
 % banner on left side
@@ -33,7 +40,7 @@
     \vspace{-0.45cm}
     \includegraphics[width=\textwidth]{triangles.pdf}
     \begin{center}
-    \tiny \col{316dbc}{made with \href{https://github.com/louisradtke/cv-banner}{github.com/louisradtke/cv-banner}}
+    \tiny \col{316dbc}{\textbf{made with \href{https://github.com/louisradtke/cv-banner}{github.com/louisradtke/cv-banner}}}
     \end{center}
 
     % profile picture
@@ -42,13 +49,29 @@
         \includegraphics[width=4.5cm,clip]{profile.png}
     \end{center}
 
-    \vspace{2.15cm}
+    \vspace{1.02cm}
+    \begin{center}
+    \begin{minipage}[t][5cm][t]{0.72\textwidth}
+        \centering
+        engineering software \& robotic systems\\
+        \vspace{0.125cm}
+        \small
+        \badge{.NET} \badge{Python} \badge{C++}
+        \badge{Linux} \badge{Management}
+
+        % software engineer,\\
+        % robotics engineer,\\
+    \end{minipage}
+    \end{center}
+
+    \vspace{13.25cm}
     \begin{center}
     \begin{minipage}{0.72\textwidth}
-        % \centering
+        \centering
         % \textsc{\textbf{Louis Radtke}}\\
         % \huge\col{c6997c}{\textbf{Louis Radtke}}\\
-        \huge\textbf{Louis Radtke}\\
+        \large\textbf{Louis Radtke}\\
+        \vspace{0.12cm}
         \scriptsize born January 1999, Hagen, DE\\
         louisradtke.dev@gmail.com\\
         \url{https://louisradtke.dev}
@@ -65,16 +88,22 @@
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.65\textwidth}
-    \vspace{0cm}
+    \vspace{0cm} % fix for misalignment with top margin
     \begin{center}
-        \title*{\Huge \textsc{\textbf{Curriculum Vitae}}}
+        \title*{\Huge \textbf{Louis Radtke}}\\
+        \textsc{\textbf{Curriculum Vitae}}
         % \title*{\Huge \col{c67e43}{\textsc{\textbf{Curriculum Vitae}}}}
     \end{center}
 
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-    % to do: summary about professional profile. carer goals? highlight of key achievements.
+    \vspace{0.125cm}
 
-    \vspace{0.5cm}
+    {
+        \small A masters CS student with 5 years of project experience in software development. Former captain/CEO of a Formula Student team and founder of their automated driving section. Dedication for technology, software architecture and workflow optimization. Loves getting his hands dirty.
+    }
+
+    % to do: summary about professional profile. carer goals? highlight of key achievements. aspiring software architect. focus developer and user experience. optimize workflows.
+
+    \vspace{0.25cm}
     \hrule
 
     \section*{\col{ac7448}{Experience}}
@@ -86,17 +115,17 @@
         \item Support in procurement of an FSD testing vehicle.
     \end{itemize}
 
-    \vspace{0.2cm}
+    \subsectionskip
 
     \col{b3805b}{\textbf{Software Engineer \hfill 2018 -- Today}} \\
     SimPlan Integrations GmbH, Witten, DE
     \begin{itemize}
         \small
-        \item Key responsibility or achievement 1.
+        \item Unsupervised implementation of customer and internal projects.
         \item Key responsibility or achievement 2.
     \end{itemize}
 
-    \vspace{0.2cm}
+    \subsectionskip
 
     \col{b38668}{\textbf{Team Captain / CEO \hfill 2023}} \\
     GET racing, Formula Student Team of TU Dortmund, DE
@@ -107,7 +136,7 @@
         \item Logistical planning of the competitions.
     \end{itemize}
 
-    \vspace{0.2cm}
+    \subsectionskip
 
     \textbf{\col{a68573}{Autonomous System Lead \hfill 2019 -- 2023}} \\
     GET racing, Formula Student Team of TU Dortmund, DE
@@ -132,7 +161,7 @@
         \item Courses on software engineering, computer graphics, pattern recognition, real time operating systems and deep \& reinforcement learning (AI)
     \end{itemize}
 
-    \vspace{0.2cm}
+    \subsectionskip
 
     \col{81879c}{\textbf{B.Sc. in Computer Science \hfill 2017 -- 2022}} \\
     TU Dortmund, DE
@@ -142,32 +171,37 @@
         \item Thesis: A method for localizing mobile robots using multiple sensors
     \end{itemize}
 
-    \vspace{0.2cm}
+    \subsectionskip
 
     \col{81879c}{\textbf{Abitur \hfill 2009 -- 2017}} \\
     Gymnasium Hohenlimburg, Hagen, DE
 
-    \begin{minipage}[t]{0.65\textwidth}
-        \col{7690bb}{\section*{Skills}}
+    \vspace{-0.5cm} % dirty fix for space above minipage
+
+    \begin{minipage}[t]{0.625\textwidth}
+        \col{7690bb}{\section*{Skills \& Certificates}}
         \begin{itemize}
             \small
             \item Programming \& Ecosystems:\\
-            .NET (++++), Python (++++), C++ (+++),\\
-            JS/TS (++), Java/Kotlin (++)
+            .NET (\textbf{++++}), Python (\textbf{++++}), C++ (\textbf{+++}),\\
+            C (\textbf{++}), JS/TS/WebTech (\textbf{++}), Java/Kotlin (\textbf{++})
+
             \item Systems \& Administration:\\
-            Linux
+            Linux (\textbf{++++}, daily use), Docker (\textbf{++++}),\\
+            GitLab CI (\textbf{++++})
+
+            \item Windows and MS office suite (\textbf{+++}).
+
+            \item Management of diverse teams of software, electrical and mechanical engineers, as well as the business operations team.
+
             \item Project Management Tools:\\
-            GitLab (++++), YouTrack ()
-            \item Skill 3
-            \item Skill 4
-            \item Skill 5
-            \item Skill 6
-            \item Skill 7
-            \item Skill 8
+            GitLab (\textbf{++++}), JetBrains YouTrack (\textbf{+++})
+
+            \item Driving Licenses: A, B, SBF Inland \& Sea, SKS
         \end{itemize}
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{0.3\textwidth}
+    \begin{minipage}[t]{0.325\textwidth}
         \col{ffffff}{.} % dirty fix for v misalignment of headings
         \section*{\col{7690bb}{Languages}}
         \begin{itemize}
@@ -176,8 +210,27 @@
             \item English -- Fluent
             \item French -- Basic
         \end{itemize}
+
+        \section*{\col{6187bd}{Freetime}}
+        \begin{itemize}
+            \small
+            \item Jogging \& bouldering
+            \item Sailing
+            \item Private projects with electronics and 3D design
+            \item 2014: Volunteer in a retirement home
+        \end{itemize}
     \end{minipage}
 
+\end{minipage}
+
+\vfill
+\hfill
+\vspace{0.17cm}
+\begin{minipage}[t]{0.65\textwidth}
+    \hrule
+    \vspace{0.125cm}
+
+    \small build \href{\giturl}{\texttt{\gitcommit}} \hfill \today
 \end{minipage}
 
 \end{document}
