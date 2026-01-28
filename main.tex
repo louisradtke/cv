@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[a4paper,margin=0.3cm,rmargin=1cm]{geometry}
+\usepackage[a4paper,margin=1cm]{geometry}
 \usepackage{graphicx}
 \usepackage{parskip}
 \usepackage{enumitem}
@@ -8,6 +8,7 @@
 \usepackage{xcolor}
 \usepackage{avant} % for font
 \usepackage{titlesec}
+\usepackage{tabularx}
 \usepackage[many]{tcolorbox}
 \tcbuselibrary{skins,breakable} % Load necessary libraries
 
@@ -33,115 +34,115 @@
 
 \begin{document}
 
-% banner on left side
-\noindent
-\begin{minipage}[t]{0.3106\textwidth}
-    \clearpage  % fix for page break before content
-    \vspace{-0.45cm}
-    \includegraphics[width=\textwidth]{triangles.pdf}
-    \begin{center}
-    \tiny \col{316dbc}{\textbf{made with \href{https://github.com/louisradtke/cv-banner}{github.com/louisradtke/cv-banner}}}
-    \end{center}
+\begin{minipage}[t]{0.68\textwidth}
+    % \clearpage
+    \vspace{-4.5cm}
 
-    % profile picture
-    \vspace{-26.92cm}
-    \begin{center}
-        \includegraphics[width=4.5cm,clip]{profile.png}
-    \end{center}
+    Résumé
 
-    \vspace{1.02cm}
-    \begin{center}
-    \begin{minipage}[t][5cm][t]{0.72\textwidth}
-        \centering
-        engineering software \& robotic systems\\
-        \vspace{0.125cm}
+    \vspace{0.25cm}
+
+    \title*{\Huge \textbf{Louis Radtke}}\\
+
+    \vspace{-0.25cm}
+
+    {
         \small
-        \badge{.NET} \badge{Python} \badge{C++}
-        \badge{Linux} \badge{Management}
-        \badge{Circuit \& 3D Design}        
-
-        % software engineer,\\
-        % robotics engineer,\\
-    \end{minipage}
-    \end{center}
-
-    \vspace{13.25cm}
-    \begin{center}
-    \begin{minipage}{0.72\textwidth}
-        \centering
-        % \textsc{\textbf{Louis Radtke}}\\
-        % \huge\col{c6997c}{\textbf{Louis Radtke}}\\
-        \large\textbf{Louis Radtke, B.Sc.}\\
-        \vspace{0.12cm}
-        \scriptsize born January 1999, Hagen, DE\\
-        louisradtke.dev@gmail.com\\
-        \url{https://louisradtke.dev}
-        % \normalsize software engineer\\
-        % robotics engineer
-    \end{minipage}
-    \end{center}
-
-    % text block 1:
-    % Louis Radtke, B.Sc.
-    % sth. w/ software engineer, robotics engineer, workflow optimizer, team player
-
-    % footer for flow: made with github.com/louisradtke-cv-flow
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.65\textwidth}
-    \vspace{0cm} % fix for misalignment with top margin
-    \begin{center}
-        \title*{\Huge \textbf{Louis Radtke}}\\
-        % \textsc{\textbf{Curriculum Vitae}}
-        % \title*{\Huge \col{c67e43}{\textsc{\textbf{Curriculum Vitae}}}}
-    \end{center}
+        A Computer Science Masters student with 6 years of project experience in software development and deployment in demanding real-world applications.
+        % Research assistant at AQUA Group, TU Dortmund.
+        % Former captain/CEO of a Formula Student team and founder of their automated driving section.
+        % De\-dication for technology, software architecture and workflow optimization.
+    }
 
     \vspace{0.125cm}
 
-    {
-        \small A Masters CS student with 5 years of project experience in software de\-velopment and deployment in demanding real-world applications. Research assistant at AQUA Group, TU Dortmund. Former captain/CEO of a Formula Student team and founder of their automated driving section. De\-dication for technology, software architecture and workflow optimization.
-    }
+    Mail: louisradtke.dev@gmail.com \\
+    Phone: thisishiddenhere \\
+    Address: Musterstraße 123, 45678 Dortmund
+\end{minipage}
+%
+\hfill
+%
+\begin{minipage}[t]{0.28\textwidth}
+    % profile picture
+    % \vspace{-26.92cm}
+    \begin{center}
+        \includegraphics[width=4.5cm,clip]{profile.png}
+    \end{center}
+\end{minipage}
 
-    % to do: summary about professional profile. carer goals? highlight of key achievements. aspiring software architect. focus developer and user experience. optimize workflows.
+% % skills section
+% \vspace{1.02cm}
+% \begin{center}
+% \begin{minipage}[t][5cm][t]{0.72\textwidth}
+%     \centering
+%     engineering software \& robotic systems\\
+%     \vspace{0.125cm}
+%     \small
+%     \badge{.NET} \badge{Python} \badge{C++}
+%     \badge{Linux} \badge{Management}
+%     \badge{Circuit \& 3D Design}        
 
-    \vspace{0.25cm}
-    \hrule
+%     % software engineer,\\
+%     % robotics engineer,\\
+% \end{minipage}
+% \end{center}
 
-    \section*{\col{b1784a}{Experience}}
-    \col{b57e53}{\textbf{Research Assistant \hfill 2024 -- Today}}\\
-    AQUA Research Group, TU Dortmund University \hfill Dortmund, DE
+\vspace{0.25cm}
+\hrule
+
+\section*{\col{b1784a}{Experience}}
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}X@{}}
+    \col{b57e53}{\textbf{2024 -- Today}}\newline
+    Dortmund, DE &
+
+    \col{b57e53}{\textbf{Research Assistant}}\newline
+    Automated Quality Assurance Group, TU Dortmund University
     \begin{itemize}
         \small
-        \item Preparation \& development of the research data infrastructure.
-        \item Support in procurement of an FSD testing vehicle.
+        \item Conceptualization, development, and deployment of research data infrastructure.
+        \item Assistance in writing a research proposal for procurement of an FSD testing vehicle.
     \end{itemize}
+    \\[0.125cm]
 
-    \subsectionskip
 
-    \col{ae7c58}{\textbf{Software Engineer \hfill 2018 -- Today}} \\
-    SimPlan Integrations GmbH \hfill Witten, DE
+    \col{ae7c58}{\textbf{2018 -- Today}}\newline
+    Witten, DE &
+
+    \col{ae7c58}{\textbf{Software Engineer}}\newline
+    SimPlan Integrations GmbH
     \begin{itemize}
         \small
-        \item Implementation of customer and internal projects.
+        \item Support and implementation of customer projects.
+        \item Maintenance and enhancement of commercial products.
+        \item Development of AI- (LLM) based knowledge management and workflow acceleration.
         \item Introduction of GitLab for managing code, tasks and as QA tool.
     \end{itemize}
+    \\[0.125cm]
 
-    \subsectionskip
 
-    \col{ab8064}{\textbf{Team Captain / CEO (Volunteer) \hfill 2023}} \\
-    GET racing Dortmund e.V., Formula Student Team \hfill Dortmund, DE
+    \col{ab8064}{\textbf{2023}}\newline
+    Dortmund, DE &
+
+    \col{ab8064}{\textbf{Team Captain / CEO (Volunteer)}}\newline
+    GET racing Dortmund e.V., Formula Student Team
     \begin{itemize}
         \small
         \item Coordination of 30 people manufacturing the FS223 vehicle.
-        \item Integration of autonomous driving software with electro-mech. systems.
+        \item Integration of autonomous driving software with electrical and mechanical systems.
         \item Introduction of new PM tool (JetBrains YouTrack) to entire team.
         \item Logistical planning of the competitions.
+        % todo: team member acquisition 2025
     \end{itemize}
+    \\[0.125cm]
 
-    \subsectionskip
 
-    \col{9c7d6c}{\textbf{Autonomous System Lead (Volunteer) \hfill 2019 -- 2023}} \\
-    GET racing Dortmund e.V., Formula Student Team \hfill Dortmund, DE
+    \col{9c7d6c}{\textbf{2019 -- 2023}}\newline
+    Dortmund, DE &
+
+    \col{9c7d6c}{\textbf{Autonomous System Lead (Volunteer)}}\newline
+    GET racing Dortmund e.V., Formula Student Team
     \begin{itemize}
         \small
         \item Initial assembly of the autonomous system department.
@@ -149,10 +150,17 @@
         \item Conception and implementation of the autonomous system software.
         \item Commissioning and development of automated simulation infrastructure.
     \end{itemize}
+\end{tabularx}
 
-    \section*{\col{7e7576}{Education}}
-    \col{7f7679}{\textbf{M.Sc. in Computer Science \hfill 2022 -- Today}} \\
-    TU Dortmund University \hfill Dortmund, DE
+\hrule
+
+\section*{\col{7e7576}{Education}}
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}X@{}}
+    \col{7f7679}{\textbf{2022 -- Today}}\newline
+    Dortmund, DE &
+    \col{7f7679}{\textbf{M.Sc. in Computer Science}}\newline
+    TU Dortmund University
     \begin{itemize}
         \small
         \item Seminar: AI in Software Engineering -- built RAG pipeline using LLMs
@@ -160,81 +168,74 @@
         \item Research project: building a research data management system
         \item Courses on software engineering, computer graphics, pattern recognition, real time operating systems and reinforcement \& deep learning (AI)
     \end{itemize}
-
-    \subsectionskip
-
-    \col{72788a}{\textbf{B.Sc. in Applied Computer Science \hfill 2017 -- 2022}} \\
-    TU Dortmund University \hfill Dortmund, DE
+    \\[0.125cm]
+    \col{72788a}{\textbf{2017 -- 2022}}\newline
+    Dortmund, DE &
+    \col{72788a}{\textbf{B.Sc. in Applied Computer Science}}\newline
+    TU Dortmund University
     \begin{itemize}
         \small
         \item Minor subject: Robotics (controls theory and electronics)
         \item Thesis: A method for localizing mobile robots using multiple sensors
     \end{itemize}
+\end{tabularx}
 
-    \subsectionskip
+\subsectionskip
 
-    \col{72788a}{\textbf{Abitur \hfill 2009 -- 2017}} \\
-    Gymnasium Hohenlimburg \hfill Hagen, DE
+\vspace{-0.5cm} % dirty fix for space above minipage
 
-    \vspace{-0.5cm} % dirty fix for space above minipage
+\begin{minipage}[t]{0.625\textwidth}
+    \col{6c84ac}{\section*{Skills \& Certificates}}
+    \begin{itemize}
+        \small
+        \item Programming \& Ecosystems:\\
+        .NET (\textbf{++++}), Python (\textbf{++++}), C++ (\textbf{+++}),\\
+        C (\textbf{++}), JS/TS/WebTech (\textbf{++}), Java/Kotlin (\textbf{++})
 
-    \begin{minipage}[t]{0.625\textwidth}
-        \col{6c84ac}{\section*{Skills \& Certificates}}
+        \item Systems \& Administration:\\
+        Linux (\textbf{++++}, daily use), Bash (\textbf{+++}) \\
+        Docker (\textbf{++++}), GitLab CI (\textbf{++++})
+
+        \item Circuit and 3D design, manufacturing CFC.
+
+        \item Windows (\textbf{+++}) and MS office suite (\textbf{+++}).
+
+        \item Management of multidisciplinary teams of software, electrical and mechanical engineers, including Business Operations staff.
+
+        \item Project Management Tools:\\
+        GitLab (\textbf{++++}), JetBrains YouTrack (\textbf{+++})
+
+        \item Licenses (DE): A, B, SBF IW \& CW, SKS.
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.325\textwidth}
+    \col{ffffff}{.} % dirty fix for v misalignment of headings
+    \section*{\col{6c84ac}{Languages}}
+    \begin{flushleft}
         \begin{itemize}
             \small
-            \item Programming \& Ecosystems:\\
-            .NET (\textbf{++++}), Python (\textbf{++++}), C++ (\textbf{+++}),\\
-            C (\textbf{++}), JS/TS/WebTech (\textbf{++}), Java/Kotlin (\textbf{++})
-
-            \item Systems \& Administration:\\
-            Linux (\textbf{++++}, daily use), Bash (\textbf{+++}) \\
-            Docker (\textbf{++++}), GitLab CI (\textbf{++++})
-
-            \item Circuit and 3D design, manufacturing CFC.
-
-            \item Windows (\textbf{+++}) and MS office suite (\textbf{+++}).
-
-            \item Management of multidisciplinary teams of software, electrical and mechanical engineers, including Business Operations staff.
-
-            \item Project Management Tools:\\
-            GitLab (\textbf{++++}), JetBrains YouTrack (\textbf{+++})
-
-            \item Licenses (DE): A, B, SBF IW \& CW, SKS.
+            \item German -- Native
+            \item English -- Fluent
+            \item French -- Basic
         \end{itemize}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.325\textwidth}
-        \col{ffffff}{.} % dirty fix for v misalignment of headings
-        \section*{\col{6c84ac}{Languages}}
-        \begin{flushleft}
-            \begin{itemize}
-                \small
-                \item German -- Native
-                \item English -- Fluent
-                \item French -- Basic
-            \end{itemize}
 
-            \section*{\col{587aab}{Freetime}}
-            \begin{itemize}
-                \small
-                \item Running \& bouldering
-                \item Sailing
-                \item Private projects with electronics and 3D design
-                \item 2014: Volunteer in a retirement home
-            \end{itemize}
-        \end{flushleft}
-    \end{minipage}
-
+        \section*{\col{587aab}{Freetime}}
+        \begin{itemize}
+            \small
+            \item Running \& bouldering
+            \item Sailing
+            \item Private projects with electronics and 3D design
+        \end{itemize}
+    \end{flushleft}
 \end{minipage}
 
 \vfill
 \hfill
-\vspace{0.17cm}
-\begin{minipage}[t]{0.65\textwidth}
-    \hrule
-    \vspace{0.125cm}
 
-    \small build \href{\giturl}{\texttt{\gitcommit}} \hfill \today
-\end{minipage}
+\hrule
+\vspace{0.125cm}
+
+\small build \href{\giturl}{\texttt{\gitcommit}} \hfill \today
 
 \end{document}
