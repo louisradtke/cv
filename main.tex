@@ -33,8 +33,10 @@
 \newcommand{\col}[2]{\textcolor[HTML]{#1}{#2}}
 \newcommand{\badge}[1]{\tcbox[on line,size=small,nobeforeafter,fontupper={\strut},bottom=-0.75mm]{\textbf{#1}}}
 \input{variables.tex} % include GitHub URL and commit string
+\IfFileExists{personal-info.tex}{\input{personal-info.tex}}{}
 
 \begin{document}
+\pagestyle{empty}
 
 \begin{minipage}[t]{0.68\textwidth}
     % \clearpage
@@ -58,9 +60,10 @@
 
     \vspace{0.125cm}
 
-    Mail: louisradtke.dev@gmail.com \\
-    Phone: thisishiddenhere \\
-    Address: Musterstraße 123, 45678 Dortmund
+    \textbf{Mail}: louisradtke.dev@gmail.com
+    \ifcsname personalinfo\endcsname
+        \personalinfo
+    \fi
 \end{minipage}
 %
 \hfill
@@ -103,7 +106,7 @@
     Automated Quality Assurance Group, TU Dortmund University
     \begin{itemize}
         \small
-        \item Conceptualization and development of PB-scale research data infrastructure.
+        \item Conceptualization and development of petabyte-scale research data infrastructure.
         \item Assistance in writing a research proposal for procurement of an FSD testing vehicle.
     \end{itemize}
     \\[-0.25cm]
@@ -116,8 +119,7 @@
     SimPlan Integrations GmbH
     \begin{itemize}
         \small
-        \item Support and implementation of customer projects.
-        \item Maintenance and enhancement of commercial products.
+        \item Support and implementation of customer projects, Maintenance and enhancement of commercial products.
         \item Development of AI- (LLM) based knowledge management and workflow acceleration.
         \item Introduction of GitLab for managing code, tasks and as QA tool.
     \end{itemize}
@@ -168,10 +170,9 @@
     TU Dortmund University
     \begin{itemize}
         \small
-        \item Thesis: Establishing a Management Software for Transient Research Data
-        \item Seminar: AI in Software Engineering -- built RAG pipeline using LLMs
-        \item Project group: \enquote{Continuous and Compositional Validation}
-        \item Courses on software engineering, computer graphics, pattern recognition, real time operating systems and reinforcement \& deep learning (AI)
+        \item Thesis: Establishing a Management Software for Transient Research Data.
+        \item Project group: Continuous and Compositional Validation [of Autonomous Systems].
+        \item Courses on software engineering, real time operating systems, deep learning (AI), pattern recognition, computer graphics.
     \end{itemize}
     \\[-0.25cm]
 
@@ -183,41 +184,36 @@
 
     \begin{itemize}
         \small
-        \item Minor subject: Robotics (featuring controls theory and electronics)
-        \item Thesis: A Method for Localizing Mobile Robots using Multiple Sensors
+        \item Minor subject: Robotics (featuring controls theory and electronics).
+        \item Thesis: A Method for Localizing Mobile Robots using Multiple Sensors.
     \end{itemize}
 \end{tabularx}
+
+\hrule
 
 \subsectionskip
 
 \vspace{-0.5cm} % dirty fix for space above minipage
 
-\begin{minipage}[t]{0.625\textwidth}
+\begin{minipage}[t]{0.51\textwidth}
     \col{6c84ac}{\section*{Skills \& Certificates}}
     \begin{itemize}
         \small
-        \item Programming \& Ecosystems:\\
-        .NET (\textbf{++++}), Python (\textbf{++++}), C++ (\textbf{+++}),\\
-        C (\textbf{++}), JS/TS/WebTech (\textbf{++}), Java/Kotlin (\textbf{++})
+        \item Programming \& Ecosystems:
+        .NET (ASP, WPF), Python, C++, C, JS/TS/WebTech, Java/Kotlin, generic SQL
 
         \item Systems \& Administration:\\
-        Linux (\textbf{++++}, daily use), Bash (\textbf{+++}) \\
-        Docker (\textbf{++++}), GitLab CI (\textbf{++++})
+        Linux (daily use), CLI tooling, Docker, Ansible, Git, GitLab CI
 
-        \item Circuit and 3D design, manufacturing CFC.
+        \item Windows and MS office suite.
 
-        \item Windows (\textbf{+++}) and MS office suite (\textbf{+++}).
-
-        \item Management of multidisciplinary teams of software, electrical and mechanical engineers, including Business Operations staff.
-
-        \item Project Management Tools:\\
-        GitLab (\textbf{++++}), JetBrains YouTrack (\textbf{+++})
-
-        \item Licenses (DE): A, B, SBF IW \& CW, SKS.
+        \item Circuit and 3D design.
     \end{itemize}
 \end{minipage}
+%
 \hfill
-\begin{minipage}[t]{0.325\textwidth}
+%
+\begin{minipage}[t]{0.18\textwidth}
     \col{ffffff}{.} % dirty fix for v misalignment of headings
     \section*{\col{6c84ac}{Languages}}
     \begin{flushleft}
@@ -227,12 +223,19 @@
             \item English -- Fluent
             \item French -- Basic
         \end{itemize}
-
-        \section*{\col{587aab}{Freetime}}
+    \end{flushleft}
+\end{minipage}
+%
+\hfill
+%
+\begin{minipage}[t]{0.29\textwidth}
+    \col{ffffff}{.} % dirty fix for v misalignment of headings
+    \begin{flushleft}
+        \section*{\col{6c84ac}{Freetime}}
         \begin{itemize}
             \small
             \item Running \& bouldering
-            \item Sailing
+            \item Sailing (owning coastal yachting license: SKS)
             \item Private projects with electronics and 3D design
         \end{itemize}
     \end{flushleft}
@@ -241,6 +244,7 @@
 \vfill
 \hfill
 
+% footer
 \hrule
 \vspace{0.125cm}
 
