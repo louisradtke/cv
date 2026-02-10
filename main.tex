@@ -30,10 +30,19 @@
 % include path for images
 \graphicspath{ {./images/} }
 
-\newcommand{\col}[2]{\textcolor[HTML]{#1}{#2}}
-\newcommand{\badge}[1]{\tcbox[on line,size=small,nobeforeafter,fontupper={\strut},bottom=-0.75mm]{\textbf{#1}}}
 \input{variables.tex} % include GitHub URL and commit string
 \IfFileExists{personal-info.tex}{\input{personal-info.tex}}{}
+
+% \newcommand{\enablecolors}[0]{}  % <-- uncomment to enable colors
+
+\newcommand{\col}[2]{
+    \ifcsname enablecolors\endcsname
+        \textcolor[HTML]{#1}{#2}
+    \else
+        #2
+    \fi
+}
+\newcommand{\badge}[1]{\tcbox[on line,size=small,nobeforeafter,fontupper={\strut},bottom=-0.75mm]{\textbf{#1}}}
 
 \begin{document}
 \pagestyle{empty}
@@ -197,6 +206,10 @@
 \vspace{-0.5cm} % dirty fix for space above minipage
 
 \begin{minipage}[t]{0.51\textwidth}
+    \ifcsname personalinfo\endcsname
+        % even dirtier fix for v misalignment of headings, since colors seem to influence it
+        \textcolor[HTML]{ffffff}{.}
+    \fi
     \col{6c84ac}{\section*{Skills \& Certificates}}
     \begin{itemize}
         \small
@@ -215,7 +228,7 @@
 \hfill
 %
 \begin{minipage}[t]{0.18\textwidth}
-    \col{ffffff}{.} % dirty fix for v misalignment of headings
+    \textcolor[HTML]{ffffff}{.} % dirty fix for v misalignment of headings
     \section*{\col{6c84ac}{Languages}}
     \begin{flushleft}
         \begin{itemize}
@@ -230,7 +243,7 @@
 \hfill
 %
 \begin{minipage}[t]{0.29\textwidth}
-    \col{ffffff}{.} % dirty fix for v misalignment of headings
+    \textcolor[HTML]{ffffff}{.} % dirty fix for v misalignment of headings
     \begin{flushleft}
         \section*{\col{6c84ac}{Freetime}}
         \begin{itemize}
