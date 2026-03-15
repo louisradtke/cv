@@ -206,7 +206,8 @@
 \vspace{-0.5cm} % dirty fix for space above minipage
 
 \begin{minipage}[t]{0.51\textwidth}
-    \ifcsname personalinfo\endcsname
+    \ifcsname enablecolors\endcsname
+    \else
         % even dirtier fix for v misalignment of headings, since colors seem to influence it
         \textcolor[HTML]{ffffff}{.}
     \fi
